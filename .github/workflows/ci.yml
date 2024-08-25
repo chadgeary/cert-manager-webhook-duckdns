@@ -36,4 +36,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64/v8
           push: true
-          tags: chadgeary/cert-manager-webhook-duckdns:latest
+          tags: ghcr.io/chadgeary/cert-manager-webhook-duckdns:latest
