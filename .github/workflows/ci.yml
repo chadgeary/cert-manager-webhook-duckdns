@@ -1,10 +1,7 @@
 ---
 name: ci
 
-on:
-  push:
-    branches:
-      - "main"
+on: workflow_dispatch
 
 jobs:
   build-docker:
@@ -36,4 +33,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64/v8
           push: true
-          tags: ghcr.io/chadgeary/cert-manager-webhook-duckdns:latest
+          tags: ghcr.io/chadgeary/cert-manager-webhook-duckdns:1.0.0

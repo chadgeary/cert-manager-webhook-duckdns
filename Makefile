@@ -6,4 +6,4 @@ OUT := $(shell pwd)/_out
 $(shell mkdir -p "$(OUT)")
 
 build:
-	docker build -t "$(IMAGE_NAME):$(IMAGE_TAG)" .
+	docker buildx build --platform linux/arm64/v8,linux/amd64 -t "$(IMAGE_NAME):$(IMAGE_TAG)" --push  .
