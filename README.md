@@ -10,5 +10,5 @@ A service for interacting with cert-manager and duckdns.
 
 ## resources
 
-- image: ghcr.io/chadgeary/cert-manager-webhook-duckdns:latest
-- chart: 
+- chart: https://github.com/chadgeary/cert-manager-webhook-duckdns/releases/download/cert-manager-webhook-duckdns-1.0.0/cert-manager-webhook-duckdns-1.0.0.tgz
+- image: ghcr.io/chadgeary/cert-manager-webhook-duckdns:1.0.0
