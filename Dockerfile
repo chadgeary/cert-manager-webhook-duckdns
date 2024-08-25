@@ -21,7 +21,7 @@ FROM alpine:3.20
 
 RUN apk add --no-cache ca-certificates
 
-COPY --from=build /workspace/webhook /usr/local/bin/webhook
+COPY --from=build /workspace/cmd/cert-manager-webhook-duckdns/webhook /usr/local/bin/webhook
 
 USER nobody:nobody
 
