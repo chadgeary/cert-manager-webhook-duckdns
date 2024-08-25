@@ -1,0 +1,10 @@
+.git/
+
+# Ignore vendors
+vendor/
+
+# Ignore test binaries
+__main__/
+
+# Test binary, build
+_out/

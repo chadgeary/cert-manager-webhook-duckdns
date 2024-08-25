@@ -1,0 +1,25 @@
+{{- if .Values.clusterIssuer.production.create -}}
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: {{ include "cert-manager-webhook-duckdns.fullname" . }}-production
+  namespace: {{ .Release.Namespace }}
+  labels:
+{{ include "cert-manager-webhook-duckdns.labels" . | indent 4 }}
+spec:
+  acme:
+    email: {{ .Values.clusterIssuer.email }}
+    preferredChain: "ISRG Root X1"
+    privateKeySecretRef:
+      name: {{ include "cert-manager-webhook-duckdns.fullname" . }}-production
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+    - dns01:
+        webhook:
+          config:
+            apiTokenSecretRef:
+              name: {{ include "cert-manager-webhook-duckdns.secretName" . }}
+              key: token
+          groupName: {{ .Values.groupName }}
+          solverName: duckdns
+{{- end -}}
