@@ -2,10 +2,17 @@ apiVersion: v1
 entries:
   cert-manager-webhook-duckdns:
   - apiVersion: v1
+    created: "2024-10-21T02:19:23.486146942Z"
+    digest: 2b28d3d611e583617f2979ab474210b705b91ad67106c53b01dd5f3c2c6221e7
+    name: cert-manager-webhook-duckdns
+    urls:
+    - https://github.com/chadgeary/cert-manager-webhook-duckdns/releases/download/cert-manager-webhook-duckdns-1.0.1/cert-manager-webhook-duckdns-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
     created: "2024-08-25T20:08:27.253187829Z"
     digest: 286b9c15cee4541a957ea1b597464d2f0a41ab536691450c000ec984a3038e64
     name: cert-manager-webhook-duckdns
     urls:
     - https://github.com/chadgeary/cert-manager-webhook-duckdns/releases/download/cert-manager-webhook-duckdns-1.0.0/cert-manager-webhook-duckdns-1.0.0.tgz
     version: 1.0.0
-generated: "2024-08-25T20:08:27.2531936Z"
+generated: "2024-10-21T02:19:23.486158393Z"
