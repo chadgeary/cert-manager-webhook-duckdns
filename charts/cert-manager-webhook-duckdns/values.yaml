@@ -54,6 +54,9 @@ securityContext:
   runAsUser: 11000
   seccompProfile:
     type: RuntimeDefault
+  sysctls:
+    - name: "net.ipv4.ip_unprivileged_port_start"
+      value: "443"
 
 # Container Security Context to be set on workload
 # ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
